@@ -17,6 +17,7 @@
 		9F0D382F24461AC700894BFA /* AVFoundation_MediaFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D382E24461AC700894BFA /* AVFoundation_MediaFeedTests.swift */; };
 		9F9768BC244624FD00086522 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9768BB244624FD00086522 /* MediaCell.swift */; };
 		9F9768BE2446253D00086522 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9768BD2446253D00086522 /* HeaderView.swift */; };
+		9F9768C024462F0400086522 /* MediaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9768BF24462F0400086522 /* MediaObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9F0D383024461AC700894BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F9768BB244624FD00086522 /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
 		9F9768BD2446253D00086522 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		9F9768BF24462F0400086522 /* MediaObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				9F0D381424461AC400894BFA /* AppDelegate.swift */,
 				9F0D381624461AC400894BFA /* SceneDelegate.swift */,
 				9F0D381824461AC400894BFA /* MediaFeedViewController.swift */,
+				9F9768BF24462F0400086522 /* MediaObject.swift */,
 				9F9768BB244624FD00086522 /* MediaCell.swift */,
 				9F9768BD2446253D00086522 /* HeaderView.swift */,
 				9F0D381A24461AC400894BFA /* Main.storyboard */,
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9768C024462F0400086522 /* MediaObject.swift in Sources */,
 				9F0D381F24461AC400894BFA /* AVFoundation_MediaFeed.xcdatamodeld in Sources */,
 				9F9768BE2446253D00086522 /* HeaderView.swift in Sources */,
 				9F0D381924461AC400894BFA /* MediaFeedViewController.swift in Sources */,
