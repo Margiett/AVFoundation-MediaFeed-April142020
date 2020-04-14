@@ -33,7 +33,7 @@ class MediaFeedViewController: UIViewController {
     }
 
 }
-
+//MARK: UICollectionView DataSource methods
 extension MediaFeedViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 20
@@ -43,10 +43,20 @@ extension MediaFeedViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mediaCell", for: indexPath)
         return cell
     }
+    // this is saying give me back a view
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath) as? HeaderView else {
+            
+            fatalError("could not dequeue a HeaderView")
+           
+        }
+     
+        return headerView
+    }
     
     
 }
-
+//MARK: UICollectionView Delegate methods
 extension MediaFeedViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let maxSize: CGSize = UIScreen.main.bounds.size // max width and height of the current device
@@ -55,7 +65,16 @@ extension MediaFeedViewController: UICollectionViewDelegate {
         
         return CGSize(width: itemWidth, height: itemHeight)
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtsection: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
+    
+    // size for header
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    
+        return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height * 0.40)
+    }
+    
+    
+    
 }

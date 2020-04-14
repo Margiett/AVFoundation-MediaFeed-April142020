@@ -7,7 +7,10 @@
 //
 
 import UIKit
-
+// this would be the headerview for the collection view 
 class HeaderView: UICollectionReusableView {
-        
+    
+    override func layoutSubviews() {
+        backgroundColor = .systemYellow
+    }
 }
